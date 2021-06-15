@@ -1,0 +1,39 @@
+
+.main-nav1 {
+    display: inline-block;
+    position:fixed;
+    width: 100%;
+    height: auto;
+    left:0px;
+    top:0px;
+    margin-top: 0;
+    margin-bottom: 1px;
+    padding-top: 0;
+    padding-left: 0px;
+    background-color: rgba(97, 131, 108, 0.9);
+    font-family: 'Noto Sans TC', sans-serif;
+    color: gray;
+    text-decoration: none;
+    text-underline-offset: none;
+    z-index: 1;
+    text-align: center;
+    justify-content: baseline;
+}
+
+.nav1 a {    
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 16px;
+    }
+    .nav1 li {
+    display: inline-block;
+    width: auto;
+    padding-bottom: 0;
+    margin-bottom: 0px;
+    margin-top: 4px;
+    text-align: center;
+    margin-right: 4px;
+    margin-left: 4px;
+    text-underline-offset: none;
+
+}    
