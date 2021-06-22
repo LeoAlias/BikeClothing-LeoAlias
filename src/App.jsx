@@ -1,14 +1,12 @@
 
 import './App.css';
-import {NavBar} from './components/navbar/navbar'
-import {ItemListContainer} from './components/Itemlistcontainer/ItemListContainer'
+import {NavBar} from './components/navbar/navbar.jsx'
+import {ItemListContainer} from './components/Itemlistcontainer/ItemListContainer.jsx'
+import {ItemCount} from './components/itemcount/itemcount.jsx'
 
 
 function App() {
-  // let name = 'Leonardo'
-  // let lastname = 'Alías'
-  // let fullName =  `${name} ${lastname}`
-  
+   
   
   return (
     <div className="App">
@@ -16,6 +14,7 @@ function App() {
       <ItemListContainer>
         Bienvenido a Bike Clothing
       </ItemListContainer>
+      <ItemCount initial={1} stock={5} onAdd={0}/>
      
       {/* <h1>Hola {fullName} </h1> */}
     </div>
