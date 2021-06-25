@@ -3,7 +3,8 @@ import './App.css';
 import {NavBar} from './components/navbar/navbar.jsx'
 import {ItemListContainer} from './components/Itemlistcontainer/ItemListContainer.jsx'
 import {ItemCount} from './components/itemcount/itemcount.jsx'
-
+import { Item } from './components/item/item';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 function App() {
    
@@ -12,11 +13,11 @@ function App() {
     <div className="App">
       <NavBar />
       <ItemListContainer>
-        Bienvenido a Bike Clothing
+      <Item  id={1} title={'remera'} price={1000} pictureUrl={'foto'}/>
       </ItemListContainer>
       <ItemCount initial={1} stock={5} onAdd={0}/>
      
-      {/* <h1>Hola {fullName} </h1> */}
+     
     </div>
   );
 }
