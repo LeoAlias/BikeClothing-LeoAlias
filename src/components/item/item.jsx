@@ -1,21 +1,14 @@
 import './item.css'
 
-export const Item = () => {
-    // class Item  {
-    //     constructor (id, title, price, pictureUrl) {
-    //         this.id = id;
-    //         this.title = title;
-    //         this.price = price;
-    //         this.pictureUrl = pictureUrl
-    //     }
-    // } 
-    // new Item ( 1, 'remera', 1000, 'foto')
+export const Item = ({Item}) => {
+    console.log(Item)
     return ( 
         <div className='productbox'>
-            {Item.id}
-            {Item.title}
-            {Item.price}
-            {Item.pictureUrl}
+            <p>Id: <span>{Item.id}</span></p>
+            <p>titulo: <span>{Item.title}</span></p>
+            <p>Precio: <span>{Item.price}</span></p>
+            <p>Foto: <span>{Item.pictureUrl}</span></p>
+           
         </div>
 
     )

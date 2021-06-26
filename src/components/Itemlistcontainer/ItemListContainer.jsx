@@ -1,9 +1,11 @@
 import './ItemListContainer.css';
 import { ItemList } from '../itemlist/itemlist';
+import { useEffect, useState } from 'react';
 
 
 
 export const ItemListContainer = () => {
+  const [shownproducts, setShownproducts] = useState ([])
   const products = [
     {
       "id": 1,
@@ -17,11 +19,24 @@ export const ItemListContainer = () => {
       "price": 2000,
       "pictureUrl": "url2"
     }]
-  return (
+
+    useEffect (()=>{
+      
+      const buscaProd = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve (products)
+        }, 2000)
+
+      })  
+      buscaProd.then((resolve) => {
+            console.log(resolve)
+            setShownproducts(resolve)
+       })
+    } ,[] )
+    
+     return (
       <div>
-            <ItemList>
-              {products}
-              </ItemList> 
+            <ItemList  products={products}/> 
             {/* <h1 className='titulo'>
               {children}
             </h1> */}

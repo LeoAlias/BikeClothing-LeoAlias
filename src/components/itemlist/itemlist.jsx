@@ -1,21 +1,12 @@
 import './itemlist.css'
 import { Item } from '../item/item'
-import { ItemListContainer } from '../Itemlistcontainer/ItemListContainer'
 
-export const ItemList = () =>{
- const buscaProd = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve ('Buscando Productos')
-    }, 2000)
-    
-   buscaProd.then((products) => {
-        const shownProducts = products.map((item ) => {
-            return (item.id)    
-    })
-    console.log(shownProducts)
-
-})
+export const ItemList = ({products}) =>{
+ 
     return (
-        console.log('algo')
+        <>
+            {products.map(item=> <Item Item={item}/>)  }
+
+        </>
     )
-})}
+}
