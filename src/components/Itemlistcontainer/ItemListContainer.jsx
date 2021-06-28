@@ -1,6 +1,8 @@
 import './ItemListContainer.css';
 import { ItemList } from '../itemlist/itemlist';
 import { useEffect, useState } from 'react';
+import remeraN from '../../assets/images/productos/remeras/remera_naranja.jpeg'
+import remeraV from '../../assets/images/productos/remeras/remera_verde.jpeg'
 
 
 
@@ -9,15 +11,16 @@ export const ItemListContainer = () => {
   const products = [
     {
       "id": 1,
-      "title": "remera",
+      "title": "remeraN",
       "price": 1000,
-      "pictureUrl": "url1"
+      "pictureUrl": <img height='100' src={remeraN} alt="remeraN" />
     },
     {
       "id": 2,
-      "title": "campera",
+      "title": "remeraV",
       "price": 2000,
-      "pictureUrl": "url2"
+      "pictureUrl": <img height='100' src={remeraV} alt="remeraV" />
+
     }]
 
     useEffect (()=>{
