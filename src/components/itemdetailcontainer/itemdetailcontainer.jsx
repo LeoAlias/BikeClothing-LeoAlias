@@ -1,17 +1,39 @@
 import { useEffect, useState } from 'react';
 import { ItemDetail } from '../itemdetail/itemdetail';
-import chaleco from '../../assets/images/productos/chalecos/chaleco.jpeg'
+// import chaleco from '../../assets/images/productos/chalecos/chaleco.jpeg'
+import remeraN from '../../assets/images/productos/remeras/remera_naranja.jpeg'
+// import remeraV from '../../assets/images/productos/remeras/remera_verde.jpeg'
+// import { useParams } from 'react-router-dom';
 
 
 export const ItemDetailContainer = () => {
     const product = 
-        {
-          "id": 3,
-          "title": "short",
-          "price": 3000,
-          "pictureUrl": <img height='100' src={chaleco} alt="chaleco" />
+    {
+      "id": 1,
+      "pictureUrl": <img height='300' src={remeraN} alt="remeraN" />,
+      "title": "remeraN",
+      "price": 1000,
+      "CategoryId": "Remeras",
+      "descripcion" :  "Este es un chaleco especial que soporta las mas altas variaciones...."
+    }
+    // },
+    // {
+    //   "id": 2,
+    //   "pictureUrl": <img height='300' src={remeraV} alt="remeraV" />,
+    //   "title": "remeraV",
+    //   "price": 2000,
+    //   "CategoryId": "Remeras2",
+    //   "descripcion" :  "Este es un chaleco especial que soporta las mas altas variaciones...."
 
-        }
+    // }, 
+    // {
+    //       "id": 3,
+    //       "pictureUrl": <img height='300' src={chaleco} alt="chaleco" />,
+    //       "title": "chaleco",
+    //       "price": 3000,
+    //       "CategoryId": "Chalecos",
+    //       "descripcion" :  "Este es un chaleco especial que soporta las mas altas variaciones...."
+    //  }]
   
       useEffect (()=>{
         
@@ -29,9 +51,6 @@ export const ItemDetailContainer = () => {
        return (
         <div>
               <ItemDetail  product={product}/> 
-              {/* <h1 className='titulo'>
-                {children}
-              </h1> */}
-          </div>
+        </div>
       )
   }      

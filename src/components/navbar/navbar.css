@@ -19,6 +19,13 @@
     text-align: center;
     justify-content: baseline;
 }
+    .logo{
+        text-align: left;
+        margin-left: 1rem;
+        display: block;
+        width: fit-content;
+        float: inline-start; 
+    }
 .nav1 {
     margin-left: 550px;
     }
