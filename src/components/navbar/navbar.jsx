@@ -12,7 +12,9 @@ export const NavBar = () => {
             <ul className='nav1'>
                 <NavLink to='/'><li> Inicio</li></NavLink>
                 <NavLink to='/about'><li> Nosotros</li></NavLink>
-                <NavLink to='/category/:categoryId'><li> Productos</li></NavLink>
+                <NavLink to='/category/remeras'><li> Remeras</li></NavLink>
+                <NavLink to='/category/remeras2'><li> Remeras2</li></NavLink>
+                <NavLink to='/category/chalecos'><li> Chalecos</li></NavLink>
                 <NavLink to='/talles'><li> Talles</li></NavLink>
                 <NavLink to='/materiales'><li> Materiales</li></NavLink>
                 <NavLink to='/cart'><li><CartWidget/></li></NavLink>
