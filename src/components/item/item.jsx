@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 
 export const Item = ({Item}) => {
-    const {id, title, price, pictureUrl, categoryId} = Item
+    const {id, title, price, pictureUrl } = Item
     return ( 
-            <Link to = {` /item/${id}`}>
+            <Link to = {`/item/${id}`}>
                 <div className='productbox'>
                     <p>Id: <span>{id}</span></p>
                     <p>titulo: <span>{title}</span></p>

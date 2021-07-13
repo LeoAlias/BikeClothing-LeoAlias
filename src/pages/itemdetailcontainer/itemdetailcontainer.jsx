@@ -2,57 +2,58 @@ import './itemdetailcontainer.css';
 import { ItemDetail } from '../../components/itemdetail/itemdetail';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import chaleco from '../../assets/images/productos/chalecos/chaleco.jpeg'
-import remeraN from '../../assets/images/productos/remeras/remera_naranja.jpeg'
-import remeraV from '../../assets/images/productos/remeras/remera_verde.jpeg'
+import chaleco from '../../assets/images/productos/chalecos/chaleco_negro.jpeg'
+import remera from '../../assets/images/productos/remeras/remera_naranja.jpeg'
+import campera from '../../assets/images/productos/camperas/campera_rosa.jpeg'
 
+const PRODUCTS = [
+  {
+    "id": 1,
+    "title": "remeraN",
+    "price": 1000,
+    "pictureUrl": <img height='300' src={remera} alt="remera" />,
+    //"pictureUrl": remera,
+    "CategoryId": "Remeras",
+    "description" :  "Este es un chaleco especial que soporta las mas altas variaciones...."
+  },
+  {
+    "id": 2,
+    "title": "campera",
+    "price": 2000,
+    //"pictureUrl": campera,
+    "pictureUrl": <img height='300' src={campera} alt="campera" />,
+    "CategoryId": "camperas",
+    "description" :  "Este es un chaleco especial que soporta las mas altas variaciones...."
+  }, 
+  {
+    "id": 3,
+    "title": "chaleco",
+    "price": 3000,
+    //"pictureUrl": chaleco,
+    "pictureUrl": <img height='300' src={chaleco} alt="chaleco" />,
+    "CategoryId": "Chalecos",
+    "description" :  "Este es un chaleco especial que soporta las mas altas variaciones...."
+   }]
 
-export const ItemDetailContainer = () => {
-    const {id} = useParams()
-    const products = [
-    {
-      "id": 1,
-      "pictureUrl": <img height='300' src={remeraN} alt="remeraN" />,
-      "title": "remeraN",
-      "price": 1000,
-      "CategoryId": "Remeras",
-      "descripcion" :  "Este es un chaleco especial que soporta las mas altas variaciones...."
+   export const ItemDetailContainer = () => {
+      const {id} = useParams()
+      const [item, setItem] = useState ({})
+   
     
-    },
-    {
-      "id": 2,
-      "pictureUrl": <img height='300' src={remeraV} alt="remeraV" />,
-      "title": "remeraV",
-      "price": 2000,
-      "CategoryId": "Remeras2",
-      "descripcion" :  "Este es un chaleco especial que soporta las mas altas variaciones...."
-
-    }, 
-    {
-          "id": 3,
-          "pictureUrl": <img height='300' src={chaleco} alt="chaleco" />,
-          "title": "chaleco",
-          "price": 3000,
-          "CategoryId": "Chalecos",
-          "descripcion" :  "Este es un chaleco especial que soporta las mas altas variaciones...."
-     }]
-  
-      useEffect (()=>{
+        useEffect (()=>{
         
-        const getItem = new Promise((resolve, reject) => {
-          setTimeout(() => {
-            // id? products.filter((item) => item.CategoryId === id) : resolve(products)
-          resolve (products)
-        }, 2000)
-        })  
-        getItem.then((resolve) => {
-              console.log(resolve)
-         })
-      } ,[] )
-      
-       return (
-        <div>
-              <ItemDetail  products={products}/> 
-        </div>
+          const getItem = ()=> {
+                return id ? 
+                PRODUCTS.find ((productoIndividual) => parseInt(productoIndividual.id) === parseInt(id))
+                : PRODUCTS
+          }
+          const itemsfilter = getItem()
+          setItem(itemsfilter)
+        },[id])
+  
+        return (
+          <div>
+                <ItemDetail  detalle={item}/> 
+          </div>
       )
-  }      
+       }

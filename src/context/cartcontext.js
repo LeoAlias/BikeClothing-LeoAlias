@@ -1,6 +1,6 @@
 import {createContext, useState} from 'react'
 
-export const CarContext = createContext();
+export const CartContext = createContext();
 
 export const CartProvider = ({children})=> {
     const [product, setProduct] = useState(0);

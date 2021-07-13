@@ -1,4 +1,3 @@
-
 import './App.css';
 import {NavBar} from './components/navbar/navbar.jsx'
 import {ItemListContainer} from './pages/Itemlistcontainer/ItemListContainer.jsx'
@@ -23,17 +22,7 @@ function App() {
                     <Route path="/item/:id">
                         <ItemDetailContainer />
                     </Route>
-                    <Route path="/talles">
-                        <div>
-                          <h1>Estas en la seccion Talles</h1>
-                        </div>
-                    </Route>
-                    <Route path="/materiales">
-                      <div>
-                          <h1>Estas en la seccion Materiales</h1>
-                        </div>
-                    </Route>
-                  </Switch>
+                </Switch>
           </main>
       </Router>
     </CartProvider>
