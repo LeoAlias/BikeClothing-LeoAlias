@@ -6,7 +6,7 @@ import './itemcount.css'
 export const ItemCount = ({ initial, stock, onAdd }) => {
     const [ contador , SetContador] = useState (initial)
     const [ nuevoStock , SetStock] = useState (stock)
-    let [ cart , SetCart ] = useState ( onAdd)
+    
 
     const restar =  () => {
         if (contador > 0 ){
@@ -20,14 +20,7 @@ export const ItemCount = ({ initial, stock, onAdd }) => {
             SetStock (nuevoStock - 1)
         }
     }
-    const envioCart = () => {
-        if (contador === 0) {
-            alert ('Cart is empty')
-        }else {    
-            SetCart (cart = contador)
-            alert (cart)
-        }
-    }
+    
     
     return (
 
@@ -35,7 +28,7 @@ export const ItemCount = ({ initial, stock, onAdd }) => {
             <button className='operbutton' onClick={restar}>-</button>
             <span>{contador}</span>
             <button className='operbutton' onClick={sumar}>+</button>
-            <button className='cartbutton' onClick={envioCart} >Agregar al carrito</button>
+            <button disabled={!contador} className='cartbutton' onClick={ () =>onAdd(contador)} >Agregar al carrito</button>
         </div>
 
 

@@ -53,7 +53,7 @@ const PRODUCTS = [
   
         return (
           <div>
-                <ItemDetail  detalle={item}/> 
+                <ItemDetail  detalleItem={item}/> 
           </div>
       )
        }
