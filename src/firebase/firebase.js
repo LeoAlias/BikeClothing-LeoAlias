@@ -12,8 +12,7 @@ import 'firebase/firestore';
   };
 
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
+  const fb = firebase.initializeApp(firebaseConfig);
 
+  export const database = fb.firestore();
 
-const fb = firebaseConfig
