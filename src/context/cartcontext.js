@@ -2,7 +2,7 @@ import {createContext, useState, useContext} from 'react'
 
 export const CartContext = createContext()
 
-// export const useCartContext = useContext(CartContext)
+//export const useCartContext = useContext(CartContext)
 
 export const CartProvider = ({children})=> {
     const [cart, setCart] = useState([]);
@@ -18,11 +18,12 @@ export const CartProvider = ({children})=> {
         }
          else setCart([{item, quantity}])
     }
-    const removeItem = (idtoremove) => {
-        setCart(cart.filter(obj => obj.item.id !== idtoremove))
+    const removeItem = (idToremove) => {
+        setCart(cart.filter(obj => obj.item.id !== idToremove))
     }
     const clear = () => {
         setCart([])
+        //  serCartqty(0)
     }
     const isInCart = id => {
         return cart.some ((item) => item.id === id)
@@ -34,15 +35,27 @@ export const CartProvider = ({children})=> {
         </CartContext.Provider>
     )
 }
+let cart = [
+    {
+      "id": 1,
+      "title": "remeraN",
+      "price": 1000,
+      "CategoryId": "Remeras",
+      'qnty' : 2
+    },
+    {
+      "id": 2,
+      "title": "campera",
+      "price": 2000,
+      "CategoryId": "camperas",
+      'qnty' : 2,
 
-// let cart = [
-//     {item : { id, title, price, pictureUrl},
-//     qnty: 2
-// },
-// {item : { id, title, price, pictureUrl},
-// qnty: 2
-// },
-// {item : { id, title, price, pictureUrl},
-// qnty: 2
-// }
-// ]
+    }, 
+    {
+      "id": 3,
+      "title": "chaleco",
+      "price": 3000,
+      "CategoryId": "Chalecos",
+      'qnty' : 2,
+     }]
+  

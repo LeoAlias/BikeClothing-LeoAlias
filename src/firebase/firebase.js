@@ -14,5 +14,5 @@ import 'firebase/firestore';
   // Initialize Firebase
   const fb = firebase.initializeApp(firebaseConfig);
 
-  export const database = fb.firestore();
+  export const dataBase = fb.firestore();
 

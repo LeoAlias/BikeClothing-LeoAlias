@@ -2,24 +2,14 @@ import './itemdetailcontainer.css';
 import { ItemDetail } from '../../components/itemdetail/itemdetail';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import chaleco from '../../assets/images/productos/chalecos/chaleco_negro.jpeg'
-import remera from '../../assets/images/productos/remeras/remera_naranja.jpeg'
-import campera from '../../assets/images/productos/camperas/campera_rosa.jpeg'
-import { database } from '../../firebase/firebase';
+// import chaleco from '../../assets/images/productos/chalecos/chaleco_negro.jpeg'
+// import remera from '../../assets/images/productos/remeras/remera_naranja.jpeg'
+// import campera from '../../assets/images/productos/camperas/campera_rosa.jpeg'
+// import { database } from '../../firebase/firebase';
+// import firebase from 'firebase/app';
+import 'firebase/firestore';
+import {dataBase} from '../../firebase/firebase'
 
-useEffect(() =>
-  setloading(true)
-  const db= getFirestore()
-  const itemCollection = db.collection("Fireproducts"
-  itemCollection.get().then((querySnapshot)=>{
-    if(querySnapshot.size ===0=){
-      console.log('No results')
-    }
-    setItems(querySnapshot.docs.map(doc=>doc.data()))
-  }).catch((error)=>{
-    console.log("error searching items, errror")
-  })
-)
 
 // const PRODUCTS = [
 //   {
@@ -53,22 +43,41 @@ useEffect(() =>
    export const ItemDetailContainer = () => {
       const {id} = useParams()
       const [item, setItem] = useState ({})
+      const [loading, setLoading] = useState ({})
    
-    
-        useEffect (()=>{
-        
-          const getItem = ()=> {
-                return id ? 
-                PRODUCTS.find ((productoIndividual) => parseInt(productoIndividual.id) === parseInt(id))
-                : PRODUCTS
+      useEffect ( () => {
+        const db = dataBase
+        const itemCollection = db.collection("items")
+        const item = itemCollection.doc(id)
+
+        item.get().then((doc)=>{
+          if(!doc.exists) {
+            console.log('El item no existe! :(')
+            return
           }
-          const itemsfilter = getItem()
-          setItem(itemsfilter)
-        },[id])
+          setItem({id: doc.id, ...doc.data() })
+        }).catch((error) => {
+          console.log("error searching items", error)
+        }).finally (() => {
+          setLoading(false)
+        })
+      
+      }, [id])
+
+      // useEffect (()=>{
+        
+      //     const getItem = ()=> {
+      //           return id ? 
+      //           PRODUCTS.find ((productoIndividual) => parseInt(productoIndividual.id) === parseInt(id))
+      //           : PRODUCTS
+      //     }
+      //     const itemsfilter = getItem()
+      //     setItem(itemsfilter)
+      //   },[id])
   
         return (
           <div>
                 <ItemDetail  detalleItem={item}/> 
           </div>
-      )
-       }
+        ) 
+}
