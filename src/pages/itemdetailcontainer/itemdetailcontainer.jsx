@@ -8,7 +8,7 @@ import { useParams } from 'react-router-dom';
 // import { database } from '../../firebase/firebase';
 // import firebase from 'firebase/app';
 import 'firebase/firestore';
-import {dataBase} from '../../firebase/firebase'
+import {db} from '../../firebase/firebase'
 
 
 // const PRODUCTS = [
@@ -46,13 +46,13 @@ import {dataBase} from '../../firebase/firebase'
       const [loading, setLoading] = useState ({})
    
       useEffect ( () => {
-        const db = dataBase
-        const itemCollection = db.collection("items")
+        // const db = dataBase
+        const itemCollection = db.collection("fireproducts")
         const item = itemCollection.doc(id)
 
         item.get().then((doc)=>{
           if(!doc.exists) {
-            console.log('El item no existe! :(')
+            console.log('El item no existe!')
             return
           }
           setItem({id: doc.id, ...doc.data() })

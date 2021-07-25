@@ -2,8 +2,8 @@ import './cart.css'
 import { CartContext,  } from '../../context/cartcontext'
 
 export const Cart = () =>{
-    const  {id, title, price} = cart
-    const {removeItem, clear, cart} = CartContext
+    const  {id, title, price} = Cart
+    const {removeItem, clear, } = CartContext
 
     return (
         <div>

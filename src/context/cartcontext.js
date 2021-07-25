@@ -1,4 +1,4 @@
-import {createContext, useState, useContext} from 'react'
+import {createContext, useState, } from 'react'
 
 export const CartContext = createContext()
 
@@ -23,7 +23,7 @@ export const CartProvider = ({children})=> {
     }
     const clear = () => {
         setCart([])
-        //  serCartqty(0)
+        //  setCartqty(0)
     }
     const isInCart = id => {
         return cart.some ((item) => item.id === id)

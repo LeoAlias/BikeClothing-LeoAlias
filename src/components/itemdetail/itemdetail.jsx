@@ -6,6 +6,7 @@ import { useContext } from 'react/cjs/react.development'
 import { CartContext } from '../../context/cartcontext'
 // import { useCartContext } from '../../context/cartcontext'
 
+
 export const ItemDetail = ({detalleItem}) => {
     const [isClicked, setisClicked] = useState(false)
     
