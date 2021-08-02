@@ -1,5 +1,10 @@
-.productbox {
+.productbox2 {
     color: aliceblue;
     font-size: large;
+    display: block;
+    margin-top: 12rem;
+    align-items: center;
+    margin-left: 40%;
+    /* justify-content: center;     */
 }
 

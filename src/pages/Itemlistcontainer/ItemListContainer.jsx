@@ -14,7 +14,6 @@ export const ItemListContainer = () => {
     useEffect ( () => {
       console.log('cargando ....')
       setLoading(true)
-      // const db = dataBase
       const itemCollection = db.collection("fireproducts")
       itemCollection.get().then((querySnapshot)=>{
         if(querySnapshot.size === 0) {

@@ -1,4 +1,7 @@
-
+* {
+    padding: 0;
+    margin: 0;
+}
 .main-nav1 {
     display: inline-block;
     position:fixed;
@@ -17,17 +20,21 @@
     text-underline-offset: none;
     z-index: 1;
     text-align: center;
-    justify-content: baseline;
+    justify-content:first baseline;
 }
     .logo{
         text-align: left;
         margin-left: 1rem;
-        display: block;
+        margin-top: 10px;
+        /* display: block; */
         width: fit-content;
-        float: inline-start; 
+        height: fit-content;
+        float: left; 
     }
 .nav1 {
     margin-left: 550px;
+    position: absolute;
+    bottom: 0;
     }
     .nav1 a {    
     text-decoration: none;
@@ -39,11 +46,11 @@
     display: inline-block;
     width: auto;
     padding-bottom: 0;
-    margin-bottom: 0px;
+    margin-bottom: 1px;
     margin-top: 0;
     text-align: center;
-    margin-right: 8px;
-    margin-left: 8px;
+    margin-right: 20px;
+    margin-left: 20px;
     text-underline-offset: none;
 
 }    

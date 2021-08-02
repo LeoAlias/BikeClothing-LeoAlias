@@ -1,8 +1,17 @@
 .carrito {
     margin-left: 500px; 
-    /* text-align: end; */
+    font-size: large;
+    display: flex;
 }
 a {
     color: aliceblue;
+    text-decoration: none;
     
+}
+.widget {
+    background-color: red;
+    border-radius: 50px;
+    font-size: medium;
+    
+
 }

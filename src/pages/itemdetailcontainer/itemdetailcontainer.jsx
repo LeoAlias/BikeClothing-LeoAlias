@@ -2,11 +2,6 @@ import './itemdetailcontainer.css';
 import { ItemDetail } from '../../components/itemdetail/itemdetail';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-// import chaleco from '../../assets/images/productos/chalecos/chaleco_negro.jpeg'
-// import remera from '../../assets/images/productos/remeras/remera_naranja.jpeg'
-// import campera from '../../assets/images/productos/camperas/campera_rosa.jpeg'
-// import { database } from '../../firebase/firebase';
-// import firebase from 'firebase/app';
 import 'firebase/firestore';
 import {db} from '../../firebase/firebase'
 
@@ -46,7 +41,6 @@ import {db} from '../../firebase/firebase'
       const [loading, setLoading] = useState ({})
    
       useEffect ( () => {
-        // const db = dataBase
         const itemCollection = db.collection("fireproducts")
         const item = itemCollection.doc(id)
 

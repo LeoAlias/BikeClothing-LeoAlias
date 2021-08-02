@@ -35,27 +35,27 @@ export const CartProvider = ({children})=> {
         </CartContext.Provider>
     )
 }
-let cart = [
-    {
-      "id": 1,
-      "title": "remeraN",
-      "price": 1000,
-      "CategoryId": "Remeras",
-      'qnty' : 2
-    },
-    {
-      "id": 2,
-      "title": "campera",
-      "price": 2000,
-      "CategoryId": "camperas",
-      'qnty' : 2,
+// let cart = [
+//     {
+//       "id": 1,
+//       "title": "remeraN",
+//       "price": 1000,
+//       "CategoryId": "Remeras",
+//       'qnty' : 2
+//     },
+//     {
+//       "id": 2,
+//       "title": "campera",
+//       "price": 2000,
+//       "CategoryId": "camperas",
+//       'qnty' : 2,
 
-    }, 
-    {
-      "id": 3,
-      "title": "chaleco",
-      "price": 3000,
-      "CategoryId": "Chalecos",
-      'qnty' : 2,
-     }]
+//     }, 
+//     {
+//       "id": 3,
+//       "title": "chaleco",
+//       "price": 3000,
+//       "CategoryId": "Chalecos",
+//       'qnty' : 2,
+//      }]
   

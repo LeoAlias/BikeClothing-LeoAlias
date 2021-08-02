@@ -26,7 +26,7 @@ function App() {
                     <Route exact path="/cart">
                         <Cart />
                     </Route>
-                </Switch>
+              </Switch>
           </main>
       </Router>
     </CartProvider>

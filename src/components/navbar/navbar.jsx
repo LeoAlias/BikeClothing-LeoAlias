@@ -7,7 +7,7 @@ export const NavBar = () => {
     return (
         <nav className='main-nav1'>
             <Link to ='/'>
-                <p className='logo'><img src={logo} alt="logo" /></p>
+                <div className='logo'><img src={logo} alt="logo" /></div>
             </Link>
             <ul className='nav1'>
                 <NavLink to='/'><li> Inicio</li></NavLink>

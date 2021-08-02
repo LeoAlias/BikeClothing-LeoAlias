@@ -2,10 +2,11 @@ import './cartwidget.css';
 import { FiShoppingCart } from 'react-icons/fi';
 
 
-export const CartWidget = () => {
+export const CartWidget = (qty) => {
+    qty = 10
     return (
         <p className='carrito'>
-          <FiShoppingCart />
+          <FiShoppingCart /> <sup className='widget'>{qty}</sup>
         </p>
     )
 }      

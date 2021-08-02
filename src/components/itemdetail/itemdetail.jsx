@@ -21,7 +21,7 @@ export const ItemDetail = ({detalleItem}) => {
    
     const {id, title, price, pictureUrl,  description } = detalleItem 
     return ( 
-                <div className='productbox'>
+                <div className='productbox2'>
                     <p>Id: <span>{id}</span></p>
                     <p>Foto: <span>{pictureUrl}</span></p>
                     <p>titulo: <span>{title}</span></p>
