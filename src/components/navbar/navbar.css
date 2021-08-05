@@ -1,56 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&display=swap");
+
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 .main-nav1 {
-    display: inline-block;
-    position:fixed;
-    width: 100%;
-    height: auto;
-    left:0px;
-    top:0px;
-    margin-top: 0;
-    margin-bottom: 1px;
-    padding-top: 0;
-    padding-left: 0px;
-    background-color: rgba(236, 245, 239, 0.2);
-    font-family: 'Noto Sans TC', sans-serif;
-    color: gray;
-    text-decoration: none;
-    text-underline-offset: none;
-    z-index: 1;
-    text-align: center;
-    justify-content:first baseline;
+  display: inline-block;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  left: 0px;
+  top: 0px;
+  margin-top: 0;
+  margin-bottom: 1px;
+  padding-top: 0;
+  padding-left: 0px;
+  background-color: rgba(236, 245, 239, 0.2);
+  font-family: "Caveat", cursive;
+  color: gray;
+  text-decoration: none;
+  text-underline-offset: none;
+  z-index: 1;
+  text-align: center;
+  justify-content: first baseline;
 }
-    .logo{
-        text-align: left;
-        margin-left: 1rem;
-        margin-top: 10px;
-        /* display: block; */
-        width: fit-content;
-        height: fit-content;
-        float: left; 
-    }
+.logo {
+  text-align: left;
+  margin-left: 1rem;
+  margin-top: 10px;
+  /* display: block; */
+  width: fit-content;
+  height: fit-content;
+  float: left;
+}
 .nav1 {
-    margin-left: 550px;
-    position: absolute;
-    bottom: 0;
-    }
-    .nav1 a {    
-    text-decoration: none;
-    color: aliceblue;
-    font-size: 16px;
-    padding-bottom: 0;
-    }
-    .nav1 li {
-    display: inline-block;
-    width: auto;
-    padding-bottom: 0;
-    margin-bottom: 1px;
-    margin-top: 0;
-    text-align: center;
-    margin-right: 20px;
-    margin-left: 20px;
-    text-underline-offset: none;
-
-}    
+  margin-left: 550px;
+  position: absolute;
+  bottom: 0;
+}
+.nav1 a {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 26px;
+  padding-bottom: 0;
+}
+.nav1 li {
+  display: inline-block;
+  width: auto;
+  padding-bottom: 0;
+  margin-bottom: 1px;
+  margin-top: 0;
+  text-align: center;
+  margin-right: 16px;
+  margin-left: 16px;
+  text-underline-offset: none;
+}
